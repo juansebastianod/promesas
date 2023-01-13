@@ -3,7 +3,7 @@ como argumentos, y devuelva una promesa que resuelva con true si las credenciale
 son válidas, o false en caso contrario.*/
 
 function login(nombre, password) {
-  let verificar;
+ 
   let verficar = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     password: /^.{4,12}$/,

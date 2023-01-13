@@ -21,7 +21,7 @@ function getData() {
 }
 
 function getUser() {
-  let promesa = new Promise((resolve, reject) => {
+  return  new Promise((resolve, reject) => {
     resolve(getData());
   });
 
@@ -30,4 +30,6 @@ function getUser() {
   });
 }
 
-getUser();
+getUser().then(res=>{
+  console.log(res)
+})

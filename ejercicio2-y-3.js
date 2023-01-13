@@ -1,14 +1,4 @@
-// let getData = new Promise((resolve, reject) => {
 
-//   let datos = {
-//     name: "juan",
-//     age: "21",
-//   };
-
-//   setTimeout(() => {
-
-//   }, 2000);
-// });
 
 function getData() {
   let datos = [
@@ -33,12 +23,7 @@ function getData() {
 
   setTimeout(() => {
     promesa = new Promise((resolve, reject) => {
-      let dato2 = datos.filter((datos) => {
-        if (datos.age > 18) {
-          return datos;
-        }
-      });
-      resolve(dato2);
+      resolve(datos);
     });
 
     promesa.then((res) => {
@@ -46,13 +31,12 @@ function getData() {
     });
   }, 2000);
 
-  console.log("pruebas");
-
   return datos;
 }
 
+
 function getUserData(id) {
-  let promesa = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     let objeto;
 
     getData().forEach((elemento) => {
@@ -67,14 +51,14 @@ function getUserData(id) {
       reject("No existe");
     }
   });
-
-  promesa
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 }
 
-console.log(getUserData(45667));
+
+
+getUserData(4566)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });

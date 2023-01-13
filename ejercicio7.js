@@ -18,7 +18,7 @@ function getData() {
 }
 
 function getWeather(city) {
-  let promesa = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     let clima = getData().find((elemento) => {
       if (elemento.city == city) {
         return elemento.weather;
@@ -31,14 +31,14 @@ function getWeather(city) {
       reject("la ciudad esta mal escrita o no existe");
     }
   });
-
-  promesa
-    .then((res) => {
-      console.log(`el clima en ${city} es ${res}`);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 }
 
-getWeather("bogoa");
+city = "bogta";
+
+getWeather(city)
+  .then((res) => {
+    console.log(`el clima en ${city} es ${res}`);
+  })
+  .catch((error) => {
+    console.error(error);
+  });

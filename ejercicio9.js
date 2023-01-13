@@ -22,7 +22,7 @@ function getData() {
 
 //los parametros son String que dicen la calle av y barrio ejemplo calle 4 av 5
 function getDirections(origen, destino) {
-  let direccion = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     getData().forEach((element) => {
       if (element.origen === origen && element.destino === destino) {
         resolve(element.navegacion);
@@ -31,14 +31,12 @@ function getDirections(origen, destino) {
       }
     });
   });
-
-  direccion
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
 }
 
-getDirections("calle 4 av 5 cec", "calle 8 av 12 nidia");
+getDirections("calle 4 av 5 ceci", "calle 8 av 12 nidia")
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
