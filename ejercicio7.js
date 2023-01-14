@@ -5,11 +5,11 @@ function getData() {
       weather: "nublado",
     },
     {
-      city: "Cucuta",
+      city: "Cúcuta",
       weather: "Soleado",
     },
     {
-      city: "bogota",
+      city: "bogotá",
       weather: "lluvioso",
     },
   ];
@@ -33,7 +33,7 @@ function getWeather(city) {
   });
 }
 
-city = "bogota";
+city = "bu";
 
 getWeather(city)
   .then((res) => {

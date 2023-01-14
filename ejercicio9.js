@@ -11,7 +11,7 @@ function getData() {
       navegacion: "derecho 12 cuadras voltea a la izquierda y llega",
     },
     {
-      origen: "calle 4 av 5 ciudad jardin",
+      origen: "calle 4 av 5 ciudad jardín",
       destino: "calle 8 av 12 zulima",
       navegacion: "derecho 3 cuadras voltea a la izquierda y llega",
     },

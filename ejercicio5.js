@@ -31,5 +31,5 @@ function getUser() {
 }
 
 getUser().then(res=>{
-  console.log(res)
+  console.log(res);
 })
