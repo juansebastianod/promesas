@@ -44,19 +44,20 @@ function getUserInfo(id) {
     ciudad: getUserData(id).ciudad,
   };
 
-  return new Promise((resolve,reject)=>{
-
-if(objeto==null){
-    resolve(objeto)
-  }else{
-reject("no existe el dato")
-
-  }});
-
-  
+  return new Promise((resolve, reject) => {
+    if (objeto != null) {
+      resolve(console.log(objeto));
+    } else {
+      reject("no existe el dato");
+    }
+  });
 }
 
-console.log(getUserInfo(4566));
+console.log(
+  getUserInfo(4566).then((res) => {
+    res;
+  })
+);
 
 function getUserData(id) {
   let objeto = {};

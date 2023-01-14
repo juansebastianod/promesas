@@ -33,7 +33,7 @@ function getWeather(city) {
   });
 }
 
-city = "bogta";
+city = "bogota";
 
 getWeather(city)
   .then((res) => {

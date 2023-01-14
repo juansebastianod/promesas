@@ -1,0 +1,41 @@
+function getData() {
+  const pais = [
+    {
+      palabra: "hello",
+      destino: "español",
+      traducion: "hola",
+    },
+    {
+      palabra: "row",
+      destino: "español",
+      traducion: "fila",
+    },
+    {
+      palabra: "hola",
+      destino: "alemania",
+      traducion: "hallo",
+    },
+  ];
+
+  return pais;
+}
+
+function translate(palabra, destino) {
+  return new Promise((resolve, reject) => {
+    let traduccion;
+
+    getData().forEach((element) => {
+      if (palabra == element.palabra && destino == element.destino) {
+      
+        traduccion = element.traducion;
+      
+      }
+    });
+
+    resolve(traduccion);
+  });
+}
+
+translate("hello", "español").then((res) => {
+  console.log(res);
+});
